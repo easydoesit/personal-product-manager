@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=subject%></title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        background-color: #cccccc;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      table {
+        border-spacing: 0;
+      }
+      td {
+        padding: 0;
+      }
+      img {
+        border: 0;
+      }
+      .userMeta {
+        font-weight: bold;
+        font-size: Larger;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="alert">Hi Mike,</p>
+    <p>New Message created by: <b><%=siteTitle%></b></p>
+    <p class="userMeta">From: <%=sender%>: <%=email%></p>
+    <hr />
+    <p class="subject"><b>Subject:</b> <%=subject%></p>
+    <p class="message"><b>Message:</b></p>
+    <p><%=message%></p>
+    <hr />
+    <p class="sendtime"><b>Sent:</b><%=date%></p>
+  </body>
+</html>

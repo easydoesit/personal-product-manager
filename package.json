@@ -1,0 +1,19 @@
+{
+  "name": "personal-product-manager",
+  "version": "1.0.0",
+  "description": "Simple Resume Style 1 Page Website with Form",
+  "main": "index.html",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/app.js"
+  },
+  "author": "Michael Grills",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "requirejs": "^2.3.7"
+  }
+}
