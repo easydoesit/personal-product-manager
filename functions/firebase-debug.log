@@ -1,0 +1,431 @@
+[debug] [2024-12-07T22:46:48.121Z] ----------------------------------------------------------------------
+[debug] [2024-12-07T22:46:48.124Z] Command:       /Users/michaelgrills/.nvm/versions/node/v18.20.5/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2024-12-07T22:46:48.124Z] CLI Version:   13.28.0
+[debug] [2024-12-07T22:46:48.125Z] Platform:      darwin
+[debug] [2024-12-07T22:46:48.125Z] Node Version:  v18.20.5
+[debug] [2024-12-07T22:46:48.127Z] Time:          Sat Dec 07 2024 15:46:48 GMT-0700 (Mountain Standard Time)
+[debug] [2024-12-07T22:46:48.127Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-07T22:46:48.284Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-07T22:46:48.285Z] > authorizing via signed-in user (michael.grills@gmail.com)
+[debug] [2024-12-07T22:46:48.465Z] java version "20.0.2" 2023-07-18
+
+[debug] [2024-12-07T22:46:48.465Z] Java(TM) SE Runtime Environment (build 20.0.2+9-78)
+Java HotSpot(TM) 64-Bit Server VM (build 20.0.2+9-78, mixed mode, sharing)
+
+[debug] [2024-12-07T22:46:48.470Z] Parsed Java major version: 20
+[info] i  emulators: Starting emulators: functions, firestore, hosting, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore, hosting, extensions"}}
+[debug] [2024-12-07T22:46:48.473Z] Checked if tokens are valid: true, expires at: 1733613696268
+[debug] [2024-12-07T22:46:48.473Z] Checked if tokens are valid: true, expires at: 1733613696268
+[debug] [2024-12-07T22:46:48.474Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/personal-product-manager [none]
+[debug] [2024-12-07T22:46:48.775Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/personal-product-manager 200
+[debug] [2024-12-07T22:46:48.776Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/personal-product-manager {"projectNumber":"856838375720","projectId":"personal-product-manager","lifecycleState":"ACTIVE","name":"personal-product-manager","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2024-12-07T03:29:49.187690Z"}
+[debug] [2024-12-07T22:46:51.423Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-07T22:46:51.423Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-07T22:46:51.423Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-07T22:46:51.424Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-07T22:46:51.424Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":3000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-12-07T22:46:51.432Z] [hub] writing locator at /var/folders/57/sqr95q0j27d_d5xbf6z34r_00000gn/T/hub-personal-product-manager.json
+[debug] [2024-12-07T22:46:51.439Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2024-12-07T22:46:52.750Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-07T22:46:52.750Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-07T22:46:52.751Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-07T22:46:52.751Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":3000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, database, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, database, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-12-07T22:46:52.755Z] defaultcredentials: writing to file /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json
+[debug] [2024-12-07T22:46:52.758Z] Setting GAC to /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json"}}
+[debug] [2024-12-07T22:46:52.759Z] Checked if tokens are valid: true, expires at: 1733613696268
+[debug] [2024-12-07T22:46:52.759Z] Checked if tokens are valid: true, expires at: 1733613696268
+[debug] [2024-12-07T22:46:52.759Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/personal-product-manager/adminSdkConfig [none]
+[debug] [2024-12-07T22:46:53.016Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/personal-product-manager/adminSdkConfig 200
+[debug] [2024-12-07T22:46:53.016Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/personal-product-manager/adminSdkConfig {"projectId":"personal-product-manager","storageBucket":"personal-product-manager.firebasestorage.app"}
+[debug] [2024-12-07T22:46:53.058Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-12-07T22:46:53.058Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2024-12-07T22:46:53.059Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/michaelgrills/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","personal-product-manager","--rules","/Users/michaelgrills/apps/personal-product-manager/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/michaelgrills/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"personal-product-manager\",\"--rules\",\"/Users/michaelgrills/apps/personal-product-manager/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2024-12-07T22:46:54.623Z] Dec 07, 2024 3:46:54 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:46:54 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2024-12-07T22:46:54.660Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2024-12-07T22:46:54.660Z] 127.0.0.1:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2024-12-07T22:46:54.675Z] Checked if tokens are valid: true, expires at: 1733613696268
+[debug] [2024-12-07T22:46:54.675Z] Checked if tokens are valid: true, expires at: 1733613696268
+[debug] [2024-12-07T22:46:54.675Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/personal-product-manager/sites 
+[debug] [2024-12-07T22:46:55.698Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/personal-product-manager/sites 200
+[debug] [2024-12-07T22:46:55.698Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/personal-product-manager/sites {"sites":[{"name":"projects/personal-product-manager/sites/personal-product-manager","defaultUrl":"https://personal-product-manager.web.app","appId":"1:856838375720:web:0d7e460684b85e6841681d","type":"DEFAULT_SITE"}]}
+[debug] [2024-12-07T22:46:55.698Z] Checked if tokens are valid: true, expires at: 1733613696268
+[debug] [2024-12-07T22:46:55.698Z] Checked if tokens are valid: true, expires at: 1733613696268
+[debug] [2024-12-07T22:46:55.698Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/personal-product-manager/webApps/1:856838375720:web:0d7e460684b85e6841681d/config [none]
+[debug] [2024-12-07T22:46:56.212Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/personal-product-manager/webApps/1:856838375720:web:0d7e460684b85e6841681d/config 200
+[debug] [2024-12-07T22:46:56.212Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/personal-product-manager/webApps/1:856838375720:web:0d7e460684b85e6841681d/config {"projectId":"personal-product-manager","appId":"1:856838375720:web:0d7e460684b85e6841681d","storageBucket":"personal-product-manager.firebasestorage.app","apiKey":"AIzaSyDsDYRp9xYQLGi-mbXp8fJwXSqGq6v3nnE","authDomain":"personal-product-manager.firebaseapp.com","messagingSenderId":"856838375720","measurementId":"G-0FWYP7PHHZ"}
+[debug] [2024-12-07T22:46:56.238Z] Checked if tokens are valid: true, expires at: 1733613696268
+[debug] [2024-12-07T22:46:56.238Z] Checked if tokens are valid: true, expires at: 1733613696268
+[debug] [2024-12-07T22:46:56.238Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/personal-product-manager [none]
+[debug] [2024-12-07T22:46:56.440Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/personal-product-manager 200
+[debug] [2024-12-07T22:46:56.440Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/personal-product-manager {"projectId":"personal-product-manager","projectNumber":"856838375720","displayName":"personal-product-manager","name":"projects/personal-product-manager","resources":{"hostingSite":"personal-product-manager"},"state":"ACTIVE","etag":"1_b5255a49-21ff-4924-ae34-55556d89a352"}
+[info] i  hosting[personal-product-manager]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[personal-product-manager]: Local server: http://127.0.0.1:3000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:3000\u001b[22m\u001b[24m"}}
+[debug] [2024-12-07T22:46:56.689Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "/Users/michaelgrills/apps/personal-product-manager/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/michaelgrills/apps/personal-product-manager/functions\" for Cloud Functions..."}}
+[debug] [2024-12-07T22:46:56.698Z] Validating nodejs source
+[debug] [2024-12-07T22:46:57.811Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/nodemailer": "^6.4.17",
+    "dotenv": "^16.4.7",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "nodemailer": "^6.9.16",
+    "ejs": "^3.1.10"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-12-07T22:46:57.811Z] Building nodejs source
+[debug] [2024-12-07T22:46:57.812Z] Failed to find version of module node: reached end of search path /Users/michaelgrills/apps/personal-product-manager/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-07T22:46:57.817Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-12-07T22:46:57.827Z] Found firebase-functions binary at '/Users/michaelgrills/apps/personal-product-manager/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8200
+
+[debug] [2024-12-07T22:46:58.395Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"},"test2":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"test2"},"sendEMail":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"sendEMail"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2024-12-07T22:46:58.434Z] defaultcredentials: writing to file /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json
+[debug] [2024-12-07T22:46:58.435Z] Setting GAC to /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld, test2, sendEMail. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld, test2, sendEMail."}}
+[info] ✔  functions[us-central1-helloWorld]: http function initialized (http://127.0.0.1:5001/personal-product-manager/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/personal-product-manager/us-central1/helloWorld)."}}
+[info] ✔  functions[us-central1-test2]: http function initialized (http://127.0.0.1:5001/personal-product-manager/us-central1/test2). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/personal-product-manager/us-central1/test2)."}}
+[info] ✔  functions[us-central1-sendEMail]: http function initialized (http://127.0.0.1:5001/personal-product-manager/us-central1/sendEMail). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/personal-product-manager/us-central1/sendEMail)."}}
+[debug] [2024-12-07T22:46:58.444Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED ::1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator   │ Host:Port      │ View in Emulator UI              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Functions  │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore  │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Hosting    │ 127.0.0.1:3000 │ n/a                              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-12-07T22:47:42.474Z] Dec 07, 2024 3:47:42 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:47:42 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-12-07T22:48:18.418Z] File /Users/michaelgrills/apps/personal-product-manager/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/michaelgrills/apps/personal-product-manager/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2024-12-07T22:48:19.420Z] Validating nodejs source
+[debug] [2024-12-07T22:48:20.342Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/nodemailer": "^6.4.17",
+    "dotenv": "^16.4.7",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "nodemailer": "^6.9.16",
+    "ejs": "^3.1.10"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-12-07T22:48:20.343Z] Building nodejs source
+[debug] [2024-12-07T22:48:20.343Z] Failed to find version of module node: reached end of search path /Users/michaelgrills/apps/personal-product-manager/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-07T22:48:20.345Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-12-07T22:48:20.346Z] Found firebase-functions binary at '/Users/michaelgrills/apps/personal-product-manager/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8454
+
+[debug] [2024-12-07T22:48:20.802Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"},"test2":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"test2"},"sendEMail":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"sendEMail"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2024-12-07T22:48:20.822Z] defaultcredentials: writing to file /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json
+[debug] [2024-12-07T22:48:20.822Z] Setting GAC to /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld, test2, sendEMail. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld, test2, sendEMail."}}
+[debug] [2024-12-07T22:48:31.339Z] File /Users/michaelgrills/apps/personal-product-manager/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/michaelgrills/apps/personal-product-manager/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2024-12-07T22:48:32.341Z] Validating nodejs source
+[debug] [2024-12-07T22:48:33.277Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/nodemailer": "^6.4.17",
+    "dotenv": "^16.4.7",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "nodemailer": "^6.9.16",
+    "ejs": "^3.1.10"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-12-07T22:48:33.277Z] Building nodejs source
+[debug] [2024-12-07T22:48:33.278Z] Failed to find version of module node: reached end of search path /Users/michaelgrills/apps/personal-product-manager/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-07T22:48:33.279Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-12-07T22:48:33.280Z] Found firebase-functions binary at '/Users/michaelgrills/apps/personal-product-manager/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8915
+
+[debug] [2024-12-07T22:48:33.724Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"},"test2":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"test2"},"sendEMail":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"sendEMail"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2024-12-07T22:48:33.744Z] defaultcredentials: writing to file /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json
+[debug] [2024-12-07T22:48:33.745Z] Setting GAC to /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld, test2, sendEMail. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld, test2, sendEMail."}}
+[debug] [2024-12-07T22:48:45.980Z] File /Users/michaelgrills/apps/personal-product-manager/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/michaelgrills/apps/personal-product-manager/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2024-12-07T22:48:46.981Z] Validating nodejs source
+[debug] [2024-12-07T22:48:47.890Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/nodemailer": "^6.4.17",
+    "dotenv": "^16.4.7",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "nodemailer": "^6.9.16",
+    "ejs": "^3.1.10"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-12-07T22:48:47.890Z] Building nodejs source
+[debug] [2024-12-07T22:48:47.890Z] Failed to find version of module node: reached end of search path /Users/michaelgrills/apps/personal-product-manager/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-07T22:48:47.892Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-12-07T22:48:47.893Z] Found firebase-functions binary at '/Users/michaelgrills/apps/personal-product-manager/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8237
+
+[debug] [2024-12-07T22:48:48.347Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"},"test2":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"test2"},"sendEMail":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"sendEMail"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2024-12-07T22:48:48.368Z] defaultcredentials: writing to file /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json
+[debug] [2024-12-07T22:48:48.368Z] Setting GAC to /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/michaelgrills/.config/firebase/michael_grills_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld, test2, sendEMail. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld, test2, sendEMail."}}
+[debug] [2024-12-07T22:52:14.584Z] Dec 07, 2024 3:52:14 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+Dec 07, 2024 3:52:14 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:52:14 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\nDec 07, 2024 3:52:14 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-12-07T22:52:17.914Z] Dec 07, 2024 3:52:17 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:52:17 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:52:18.133Z] Dec 07, 2024 3:52:18 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:52:18 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:55:41.650Z] Dec 07, 2024 3:55:41 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:55:41 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:55:41.834Z] Dec 07, 2024 3:55:41 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:55:41 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:55:41.849Z] Dec 07, 2024 3:55:41 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:55:41 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:55:42.055Z] Dec 07, 2024 3:55:42 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:55:42 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:55:42.243Z] Dec 07, 2024 3:55:42 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:55:42 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:55:42.354Z] Dec 07, 2024 3:55:42 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:55:42 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:55:52.743Z] Dec 07, 2024 3:55:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:55:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:56:52.777Z] Dec 07, 2024 3:56:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:56:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:56:52.778Z] Dec 07, 2024 3:56:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:56:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:56:52.781Z] Dec 07, 2024 3:56:52 P.M. com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreWriteHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:56:52 P.M. com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreWriteHandler onClose\nINFO: channel closed\n"}}
+[debug] [2024-12-07T22:57:52.791Z] Dec 07, 2024 3:57:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:57:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:58:02.520Z] Dec 07, 2024 3:58:02 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:58:02 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:58:52.804Z] Dec 07, 2024 3:58:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:58:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T22:59:37.818Z] Dec 07, 2024 3:59:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 3:59:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:00:37.835Z] Dec 07, 2024 4:00:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:00:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:01:22.846Z] Dec 07, 2024 4:01:22 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:01:22 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:02:37.861Z] Dec 07, 2024 4:02:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:02:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:03:37.878Z] Dec 07, 2024 4:03:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:03:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:04:22.889Z] Dec 07, 2024 4:04:22 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:04:22 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:05:07.900Z] Dec 07, 2024 4:05:07 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:05:07 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:05:52.908Z] Dec 07, 2024 4:05:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:05:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:06:37.918Z] Dec 07, 2024 4:06:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:06:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:07:37.928Z] Dec 07, 2024 4:07:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:07:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:08:22.937Z] Dec 07, 2024 4:08:22 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:08:22 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:09:23.024Z] Dec 07, 2024 4:09:23 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:09:23 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:10:23.039Z] Dec 07, 2024 4:10:23 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:10:23 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:11:08.047Z] Dec 07, 2024 4:11:08 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:11:08 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:12:23.060Z] Dec 07, 2024 4:12:23 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:12:23 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:13:12.059Z] Dec 07, 2024 4:13:12 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:13:12 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:13:12.067Z] Dec 07, 2024 4:13:12 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:13:12 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:13:12.073Z] Dec 07, 2024 4:13:12 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:13:12 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:13:12.087Z] Dec 07, 2024 4:13:12 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:13:12 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:13:57.097Z] Dec 07, 2024 4:13:57 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:13:57 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:14:12.096Z] Dec 07, 2024 4:14:12 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:14:12 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2024-12-07T23:14:12.098Z] Dec 07, 2024 4:14:12 P.M. com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreWriteHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:14:12 P.M. com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreWriteHandler onClose\nINFO: channel closed\n"}}
+[debug] [2024-12-07T23:14:57.107Z] Dec 07, 2024 4:14:57 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 07, 2024 4:14:57 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
