@@ -11,9 +11,6 @@
   "author": "Michael Grills",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "ejs": "^3.1.10",
-    "express": "^4.21.1",
-    "requirejs": "^2.3.7"
+    "firebase": "^11.0.2"
   }
 }
