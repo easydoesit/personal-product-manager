@@ -1,34 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+//import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
+import Menu from './components/menu'
+import ContactForm from './components/contactForm'
+import About from './components/about'
+import { menuList } from './data/data'
+import Projects from './components/projects'
+import Hero from './components/hero'
+import { menuHeight } from './data/data'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function App() {  
+    
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='snap-y'>
+    <Menu />
+    <Hero 
+      title= {menuList[0].title}
+      anchor={menuList[0].anchor}
+      topOffset={(menuHeight).toString()}
+    />
+    <About 
+    title= {menuList[1].title}
+    anchor={menuList[1].anchor}
+    topOffset={(menuHeight).toString()}
+    />
+     <Projects
+    title= {menuList[2].title}
+    anchor={menuList[2].anchor}
+    topOffset={(menuHeight).toString()}
+    />
+    <ContactForm 
+       title= {menuList[3].title}
+       anchor={menuList[3].anchor}
+       topOffset={(menuHeight).toString()}
+    />
+    </div>
   )
 }
 
