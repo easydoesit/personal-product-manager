@@ -1,0 +1,7 @@
+.sectionScrollMarginTop {
+  @apply scroll-mt-20;
+}
+
+.menuHeight {
+  @apply h-20;
+}

@@ -18,5 +18,3 @@ export const menuList:MenuListT = [
     anchor:'contact'
   }
 ];
-
-export const menuHeight = 20;

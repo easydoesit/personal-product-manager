@@ -1,10 +1,9 @@
-import { SectionI } from "../types/types";
+import { MenuListI } from "../types/types";
 
-export default function ContactForm({title, anchor, topOffset}:SectionI){
-  const cssReplace = `pb-96 scroll-mt-${topOffset} snap-start`
+export default function ContactForm({title, anchor}:MenuListI){
 
   return (
-      <div className={cssReplace} id={anchor}>
+      <div className="pb-96 snap-start sectionScrollMarginTop" id={anchor}>
       <form action="" id="contactForm">
         <h1>{title}</h1>
         <input
