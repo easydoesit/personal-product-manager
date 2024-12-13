@@ -8,20 +8,22 @@ export default function About({title, anchor}:MenuListI) {
   
   return (
     <section className={`${sectionScrollMarginStyles} snap-start w-full flex flex-col items-center my-16`} id={anchor}>
-      <article className=" text-slate-600 my-4 text-base sm:w-10/12 lg:w-1/2">
+      <article className=" text-darkpoop my-4 text-base w-11/12 sm:w-10/12 md:w-8/12 xl:w-1/2">
         <h1 className="font-heading text-3xl">
           {title}
         </h1>
         <div className="ml-4 mt-4 font-reading">
-          <div><img src="./img/Michael_Grills_HeadShot.jpg" className="w-1/4 med:w-1/3 lg:w-1/2 object-scale-down text-wrap float-left ml-8 mr-8 mb-8 mt-2"></img>
-          <p className="my-4 ml-4">
-                Hello,
-              </p>
-              <p className="my-4 leading-8 ml-4">
-                I'm a multidisciplinary, cross-industry product leader with 20+ years of experience leading teams across various B2C, B2B, entertainment and marketing industries. <strong>My strengths lie in User Experience, where the product both delivers and delights the customer.</strong> Here's a 
-                <b> summary</b> of my career:
-              </p>
-          
+          <div  className="flex flex-col md:flex-row w-full"> 
+            <div className="bg-[url(./img/Michael_Grills_HeadShot.jpg)] bg-no-repeat bg-cover bg-center float-left h-48 w-2/5 md:h-auto md:w-1/2 "> </div>
+            <div className="w-full md:w-3/5">
+              <p className="my-4 md:ml-4">
+                  Hey there,
+                </p>
+                <p className="my-4 leading-8 md:ml-4">
+                  I'm a multidisciplinary, cross-industry product leader with 20+ years of experience leading teams across various B2C, B2B, entertainment and marketing industries. <strong>My strengths lie in User Experience, where the product both delivers and delights the customer.</strong> Here's a 
+                  <b> summary</b> of my career:
+                </p>
+              </div>
           </div>
           <ul className="ml-10 my-6 leading-8 list-disc">
             
@@ -35,11 +37,11 @@ export default function About({title, anchor}:MenuListI) {
             I've worked with world-class brands, including Google, Honda, Sirius XM, Bioware Corp. and Embracer Group, as a part of their creative or product teams, bringing first-class products, advertising and entertainment to consumers worldwide.
             </li>
           </ul>
-          <p className="my-4 leading-8">There is more details below and you can also <a href="https://www.linkedin.com/in/michaelgrills/" className="text-orange-500 underline">view my work history on LinkedIn.</a> Soon, my <b>Branding Asset Management Side Project</b> will be listed here. <a onClick={() => handleScrollClick(menuList[3])} className="text-orange-500 cursor-pointer underline" >Ask me About it.</a></p>
+          <p className="my-4 leading-8">There is more details below and you can also <a href="https://www.linkedin.com/in/michaelgrills/" className="text-orangebeard underline">view my work history on LinkedIn.</a> Soon, my <b>Branding Asset Management Side Project</b> will be listed here. <a onClick={() => handleScrollClick(menuList[3])} className="text-orangebeard cursor-pointer underline" >Ask me About it.</a></p>
         </div>
       </article>
 
-      <article className="text-slate-600 my-4 sm:w-10/12 lg:w-1/2">
+      <article className="text-darkpoop my-4 sm:w-10/12 lg:w-1/2">
         <h1 className="font-heading text-3xl">
           How I Work
         </h1>
@@ -61,7 +63,7 @@ export default function About({title, anchor}:MenuListI) {
         </div>
       </article>
 
-      <article className="text-slate-600 my-4 sm:w-10/12 lg:w-1/2">
+      <article className="text-darkpoop my-4 sm:w-10/12 lg:w-1/2">
       <h1 className="font-heading text-3xl">
           Work History
         </h1>

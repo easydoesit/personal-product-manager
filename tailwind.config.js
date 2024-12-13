@@ -6,10 +6,24 @@ export default {
     "./index.html",
     "./src/**/*.{js,tx,jsx,tsx}"],
   theme: {
+    colors: {
+      'burgandy': '#A40E4C',
+      'midnightblue': '#2C2C54',
+      'leaf': '#ACC3A6',
+      'beach': '#F5D6Ba',
+      'caramel': '#F49D6E',
+      'darkpoop': '#37371F',
+      'toxicfade': '#EAEFBD',
+      'grasshopper': '#C9E3AC',
+      'springlawn': '#C9E3AC',
+      'orangebeard': '#EA9010'
+
+
+    },
     fontSize: {
       sm: '1rem',
       base: '1.3rem',
-      xl: '1.75rem',
+      xl: '1.65rem',
       '2xl': '2rem',
       '3xl': '2.5rem',
       '4xl': '3rem',
