@@ -1,7 +1,12 @@
-import {addDoc, collection, DocumentData} from "firebase/firestore";
+import {addDoc, collection, DocumentData, connectFirestoreEmulator} from "firebase/firestore";
 import { CheckFirestoreInit } from "./firestoreInit";
 
 const db = CheckFirestoreInit();
+
+if (db && process.env.ENV === 'DEV') {
+  connectFirestoreEmulator(db, '127.0.0.1', 8080);
+} 
+
 
 export async function CreateContact(contact:DocumentData){
 

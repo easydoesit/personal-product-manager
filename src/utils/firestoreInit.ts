@@ -14,9 +14,3 @@ export function CheckFirestoreInit() {
   }
 
 }
-
-
-
-
-
-

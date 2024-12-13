@@ -1,7 +1,6 @@
-import { ChangeEvent, ChangeEventHandler, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { MenuListI } from "../types/types";
-import { DocumentData, serverTimestamp, query, collection, where, getDocs, connectFirestoreEmulator} from "firebase/firestore";
-import { CheckFirestoreInit } from "../utils/firestoreInit";
+import { serverTimestamp} from "firebase/firestore";
 import { CreateContact } from "../utils/firestoreFunctions";
 
 interface ContactI {
@@ -9,12 +8,6 @@ interface ContactI {
   email: string;
   message:string;
 }
-
-const db = CheckFirestoreInit();
-
-if (db && process.env.ENV === 'DEV') {
-  connectFirestoreEmulator(db, '127.0.0.1', 8080);
-} 
 
 export default function ContactForm({title, anchor}:MenuListI){
   const[transitionMode, setTransitionMode] = useState<string>('form');
@@ -29,6 +22,8 @@ export default function ContactForm({title, anchor}:MenuListI){
 
   const resetForm = () => {
     setContactForm(contactInfoInitialState);
+    setTransitionMode("form");
+    (document.getElementById('contactForm') as HTMLFormElement).reset();
   }
 
   const onFieldChange = (event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
@@ -49,11 +44,16 @@ export default function ContactForm({title, anchor}:MenuListI){
     try {
       
       setTransitionMode('transition');
-      const response = await CreateContact(contactInfo);
+      await CreateContact(contactInfo)
+      .then(() => {
+        console.log("It worked!!!");
+        setTransitionMode("success");
+        resetForm();
+      });
     
-      console.log(response);
 
     } catch(error) {
+      setTransitionMode("failed");
       console.error(error);
     }
 
@@ -80,7 +80,7 @@ export default function ContactForm({title, anchor}:MenuListI){
           <input
             className="form-control rounded-lg w-full md:w-1/2 pl-4 my-4 ml-0 md:ml-2 focus:outline-none"
             type="email"
-            name="name"
+            name="email"
             id="email"
             placeholder="Email"
             onChange={onFieldChange}
