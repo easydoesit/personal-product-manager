@@ -1,15 +1,26 @@
-import {onRequest} from "firebase-functions/v2/https";
-import * as logger from "firebase-functions/logger";
+
+//import * as logger from "firebase-functions/logger";
+import { onDocumentCreated} from "firebase-functions/firestore";
 //import * as nodemailer from "nodemailer";
 //import ejs from 'ejs';
 import * as  dotenv from 'dotenv'
+
 
 dotenv.config();
 
 // Start writing functions
 // https://firebase.google.com/docs/functions/typescript
 
-export const sendEMail = onRequest(async (request, response) => {
+exports.sendEMail = onDocumentCreated('contacts/{id}', (event) => {
+  const snapshot = event.data;
+  console.log(snapshot?.data().name);
+  console.log(snapshot?.data().email);
+  console.log(snapshot?.data().message);
+  console.log(snapshot?.data().date);
+})
+
+//export const sendEMail = onRequest(async (request, response) => {
+
   // const { sender, email, subject, message } = request.body;
   // const newDate = new Date();
   // const datehour = newDate.getHours();
@@ -20,8 +31,8 @@ export const sendEMail = onRequest(async (request, response) => {
   // const date = `${datehour}:${datemin} ${dateMonth} ${dateDay}, ${dateYear}`;
 
 
-  logger.info("sendMail", {structureData: true});
-  console.log("user_email: ", process.env.GMAIL_USER_EMAIL);
+  // logger.info("sendMail", {structureData: true});
+  // console.log("user_email: ", process.env.GMAIL_USER_EMAIL);
 
   // const transporter = nodemailer.createTransport({
   //   service:'gmail',
@@ -52,4 +63,4 @@ export const sendEMail = onRequest(async (request, response) => {
   // response.json(result.messageId);
 
 
-})
+// })
