@@ -8,6 +8,7 @@ import About from './components/about'
 import { menuList } from './data/data'
 import Projects from './components/projects'
 import Hero from './components/hero'
+import Footer from './components/footer'
 
 function App() {  
     
@@ -29,6 +30,7 @@ function App() {
        title= {menuList[3].title}
        anchor={menuList[3].anchor}
     />
+    <Footer />
     </div>
   )
 }

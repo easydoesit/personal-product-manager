@@ -13,7 +13,7 @@ export async function CreateContact(contact:DocumentData){
   try {
     
     if(db) {
-      await addDoc(collection(db, 'Contacts'), contact);
+      await addDoc(collection(db, 'contacts'), contact);
     };
   
   } catch (error) {
