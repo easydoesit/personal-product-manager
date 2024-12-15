@@ -15,10 +15,7 @@ export default function ContactForm({title, anchor}:MenuListI){
       form.reset();
       setTransitionMode("form");
     },3000)
-    
-   
-    
-    console.log(transitionMode);
+
   }
 
   const handleContact = async(event:React.SyntheticEvent<HTMLFormElement>) => {
@@ -39,19 +36,32 @@ export default function ContactForm({title, anchor}:MenuListI){
       date: serverTimestamp()
     }
     
-    try {
-      
+    try {      
       setTransitionMode('sending');
       await CreateContact(contactInfo)
-      .then(() => {
-        setTransitionMode("success");
-        resetForm();
-      });
+      setTransitionMode("success");
+      resetForm();
+  // if (result.status === "success") {
+  //       setTransitionMode("success");
+  //       resetForm();
+  //     } else {
+  //       setTransitionMode("failed");
+  //       console.error("Failed status:", result.error);
+  //    }
+
+
+    //console.log("Final result:", result);
+      // await CreateContact(contactInfo)
+      // .then((result) => {
+      //   setTransitionMode("success");
+      //   resetForm();
+      //   console.log(result);
+      // });
     
 
     } catch(error) {
       setTransitionMode("failed");
-      console.error(error);
+      console.error("Error sending email", error);
     }
 
   }

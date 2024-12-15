@@ -1,66 +1,64 @@
 
-//import * as logger from "firebase-functions/logger";
-import { onDocumentCreated} from "firebase-functions/firestore";
-//import * as nodemailer from "nodemailer";
-//import ejs from 'ejs';
+import * as logger from "firebase-functions/logger";
+import { onRequest} from "firebase-functions/v2/https";
+import * as nodemailer from "nodemailer";
+import * as ejs from 'ejs';
+import * as path from 'path';
 import * as  dotenv from 'dotenv'
-
 
 dotenv.config();
 
-// Start writing functions
-// https://firebase.google.com/docs/functions/typescript
+export const sendEMail = onRequest(async (req:any, res:any) => {
 
-exports.sendEMail = onDocumentCreated('contacts/{id}', (event) => {
-  const snapshot = event.data;
-  console.log(snapshot?.data().name);
-  console.log(snapshot?.data().email);
-  console.log(snapshot?.data().message);
-  console.log(snapshot?.data().date);
-})
+  try {
+    const { name, email, message, date } = req.body;
 
-//export const sendEMail = onRequest(async (request, response) => {
+    if (!name || !email || !message) {
+      res.status(400).send("Missing required fields: name, email, or message");
+      return;
+    }
 
-  // const { sender, email, subject, message } = request.body;
-  // const newDate = new Date();
-  // const datehour = newDate.getHours();
-  // const datemin = newDate.getMinutes();
-  // const dateDay = newDate.getDate();
-  // const dateMonth = newDate.toLocaleString('default', { month: 'long' });
-  // const dateYear = newDate.getFullYear();
-  // const date = `${datehour}:${datemin} ${dateMonth} ${dateDay}, ${dateYear}`;
+    const emailTemplate = await ejs.renderFile(path.join(__dirname, 'email/email.ejs'), {
+      siteTitle: process.env.SITE_TITLE,
+      sender:name,
+      email,
+      subject:"Message from Project Management Site",
+      message,
+      date: new Date(date).toLocaleString(),
+    });
 
 
-  // logger.info("sendMail", {structureData: true});
-  // console.log("user_email: ", process.env.GMAIL_USER_EMAIL);
+    const transporter = nodemailer.createTransport({
+      service:'gmail',
+      host:'smtp.gmail.com',
+      port: 587,
+      secure:false,
+      auth: {
+        user:process.env.GMAIL_USER_EMAIL,
+        pass:process.env.GMAIL_PASSWORD
+      },
+    });
 
-  // const transporter = nodemailer.createTransport({
-  //   service:'gmail',
-  //   host:'smtp.gmail.com',
-  //   port: 587,
-  //   secure:false,
-  //   auth: {
-  //     user:process.env.GMAIL_USER_EMAIL,
-  //     pass:process.env.GMAIL_PASSWORD
-  //   },
-  // });
+    const mailOptions = {
+      from: {
+        name: name,
+        address: email
+      },
+      to: [process.env.GMAIL_USER_EMAIL as string],
+      subject: `Message from ${name}`,
+      text:message,
+      html:emailTemplate
+    };
+    
+    const result = await transporter.sendMail(mailOptions);
 
-  // const mailOptions = {
-  //   from: {
-  //     name: "M Grills",
-  //     address: "michael.grills@gmail.com"
-  //   },
-  //   to: ["michael.grills@gmail.com"],
-  //   subject: "test Email",
-  //   text:"test message",
-  //   //text:message,
-  //   //html: `<p>${message}</p>`,
-  //   html:`<p>test message</p>`
-  // }
-  
-  // const result = await transporter.sendMail(mailOptions);
+    logger.info("Email sent", { messageId: result.messageId});
+    
+    res.status(200).send({ success: true, messageId: result.messageId });
+    
+  } catch(error) {
+      logger.error("Error sending email", error);
+      res.status(500).send({ success: false, error: error });
+    } 
 
-  // response.json(result.messageId);
-
-
-// })
+});
