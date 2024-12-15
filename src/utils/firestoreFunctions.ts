@@ -9,10 +9,9 @@ if (db && process.env.ENV === 'DEV') {
 
 let functionDest:string;
 
-if (process.env.ENV === "DEV") {
-  functionDest = "http://127.0.0.1:5001/personal-product-manager/us-central1"
+if(process.env.ENV === 'DEV') { 
+functionDest = import.meta.env.VITE_FUNCTION_END_POINT;
 }
-
 
 export async function CreateContact(contact:DocumentData):Promise<DocumentData>{
   if (!db) throw new Error("Firestore is not initialized");
