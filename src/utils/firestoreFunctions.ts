@@ -34,7 +34,6 @@ export async function CreateContact(contact:DocumentData):Promise<DocumentData>{
     throw new Error(`HTTP error! Status: ${response.status}, Body: ${errorText}`);
   }
   
-  console.log("Email send successfully:", result);
   return result;
 
   } catch (error) {

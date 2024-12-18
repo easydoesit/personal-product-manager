@@ -1,9 +1,13 @@
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
+
 .sectionScrollMarginTop {
-  @apply scroll-mt-20;
+  @apply scroll-mt-16;
 }
 
 .menuHeight {
-  @apply h-20;
+  @apply h-16;
 }
 
 .contactFormSizeLrg {

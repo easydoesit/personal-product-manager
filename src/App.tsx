@@ -8,7 +8,8 @@ import About from './components/about'
 import { menuList } from './data/data'
 import Projects from './components/projects'
 import Hero from './components/hero'
-import Footer from './components/footer'
+import Footer from './components/footer';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 
 function App() {  
     
@@ -26,10 +27,13 @@ function App() {
     title= {menuList[2].title}
     anchor={menuList[2].anchor}
     />
-    <ContactForm 
+        <GoogleReCaptchaProvider reCaptchaKey={import.meta.env.VITE_GOOGLE_RECAPTCHA}>
+    <ContactForm title="Contact Me" anchor="contact" />
+  </GoogleReCaptchaProvider>
+    {/* <ContactForm 
        title= {menuList[3].title}
        anchor={menuList[3].anchor}
-    />
+    /> */}
     <Footer />
     </div>
   )

@@ -4,8 +4,12 @@ import { serverTimestamp} from "firebase/firestore";
 import { CreateContact } from "../utils/firestoreFunctions";
 import TransitionSending from "./transistions/transistionSending";
 import TransitionSuccess from "./transistions/transistionSuccess";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+
 
 export default function ContactForm({title, anchor}:MenuListI){
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  
   const[transitionMode, setTransitionMode] = useState<string>('form');
 
   const resetForm = () => {
@@ -20,6 +24,11 @@ export default function ContactForm({title, anchor}:MenuListI){
 
   const handleContact = async(event:React.SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    if(!executeRecaptcha) {
+      console.error('Execute Recaptcha not Available');
+      return;
+    }
     
     //get the form info
     const form = event.currentTarget
@@ -37,28 +46,17 @@ export default function ContactForm({title, anchor}:MenuListI){
     }
     
     try {      
+      await executeRecaptcha('submitForm');
+     
       setTransitionMode('sending');
-      await CreateContact(contactInfo)
-      setTransitionMode("success");
-      resetForm();
-  // if (result.status === "success") {
-  //       setTransitionMode("success");
-  //       resetForm();
-  //     } else {
-  //       setTransitionMode("failed");
-  //       console.error("Failed status:", result.error);
-  //    }
-
-
-    //console.log("Final result:", result);
-      // await CreateContact(contactInfo)
-      // .then((result) => {
-      //   setTransitionMode("success");
-      //   resetForm();
-      //   console.log(result);
-      // });
+      const result = await CreateContact(contactInfo);
+      
+      if (result.success) {
+        setTransitionMode("success");
+        resetForm();
     
-
+      }
+      
     } catch(error) {
       setTransitionMode("failed");
       console.error("Error sending email", error);
@@ -111,6 +109,9 @@ export default function ContactForm({title, anchor}:MenuListI){
                 <p className="text-burgandy pt-4">Oh No! Something went wrong. Please Try Hitting Submit Again!</p>
               )}
             
+            </div>
+            <div className="text-center font-thin text-sm pb-4">
+                 This site is protected by reCAPTCHA and the Google <a className="underline text-burgandy" href="https://policies.google.com/privacy">Privacy Policy</a> and <a className="underline text-burgandy" href="https://policies.google.com/terms">Terms of Service</a> apply.
             </div>
           </form>
         </section>

@@ -17,8 +17,6 @@ export default {
       'grasshopper': '#C9E3AC',
       'springlawn': '#C9E3AC',
       'orangebeard': '#EA9010'
-
-
     },
     fontSize: {
       sm: '1rem',
@@ -27,7 +25,10 @@ export default {
       '2xl': '2rem',
       '3xl': '2.5rem',
       '4xl': '3rem',
-      '5xl': '3.75rem'
+      '5xl': '3.75rem',
+      '6xl': '4.75rem',
+      '7xl': '6rem',
+      '8xl': '7.5rem'
     },
     extend: {
       animation: {
