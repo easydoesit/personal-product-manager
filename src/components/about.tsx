@@ -41,7 +41,7 @@ export default function About({title, anchor}:MenuListI) {
         </div>
       </article>
 
-      <article className="text-darkpoop my-4 sm:w-10/12 lg:w-1/2">
+      <article className="text-darkpoop my-4 w-11/12  sm:w-10/12 lg:w-1/2">
         <h1 className="font-heading text-3xl">
           How I Work
         </h1>
@@ -63,7 +63,7 @@ export default function About({title, anchor}:MenuListI) {
         </div>
       </article>
 
-      <article className="text-darkpoop my-4 sm:w-10/12 lg:w-1/2">
+      <article className="text-darkpoop my-4 w-11/12  sm:w-10/12 lg:w-1/2">
       <h1 className="font-heading text-3xl">
           Work History
         </h1>

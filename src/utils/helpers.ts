@@ -2,12 +2,10 @@ import { MenuListI } from "../types/types";
 
 export function handleScrollClick(menuItem:MenuListI) {
 
-  const element = document.getElementById(menuItem.anchor);
-    window.location.hash = menuItem.anchor;
+  const element = document.getElementById(menuItem.anchor) as Element;
     
-    element?.scrollIntoView ({
+    element.scrollIntoView ({
       behavior:'smooth'
     })
-  
   
 }
