@@ -1,10 +1,14 @@
 import { Link } from "react-router"
 
+
+
 export default function AIAgents() {
   return (
-    <section className="snap-start w-full flex flex-col items-center my-16">
-      <article className=" text-darkpoop my-4 text-base w-11/12 sm:w-10/12 md:w-8/12 xl:w-1/2">
-      <h1 className="font-heading text-3xl">How I Used Narrative Design, NeuroScience and Improv Theatre To Develop an MVP AI Agent that Stayed Entertaining 12X Longer than the Competition for Matrix Labs</h1>
+    <article className="w-full flex flex-col items-center">
+      <div className="w-full bg-midnightblue text-grasshopper flex flex-col items-center py-8">
+      <h1 className="font-heading text-3xl w-11/12 sm:w-10/12 md:w-8/12 xl:w-1/2">How I Used Narrative Design, NeuroScience and Improv Theatre To Develop an MVP AI Agent that Stayed Entertaining 12X Longer than the Competition for Matrix Labs</h1>
+      </div>
+      <div className=" text-darkpoop my-4 text-base w-11/12 sm:w-10/12 md:w-8/12 xl:w-1/2">
       <div className="w-full flex flex-row">
         <div className="w-2/3">
           
@@ -136,7 +140,7 @@ export default function AIAgents() {
           <p className="my-4">
             Actor 1 has to figure out what to say next, and the audience is confused. It's not the best on-stage performance.
           </p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/RkGUjMYWKv4?si=aPZNtCljERjqt6yC" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/RkGUjMYWKv4?si=aPZNtCljERjqt6yC" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           <p className="my-4">
             By adding this device to the prompt, we could always move the story forward and prevent the LLM from hallucinating as much.
           </p>
@@ -176,9 +180,9 @@ export default function AIAgents() {
           </Link>
           
           </div>
-      </article>
+      </div>
       
 
-    </section>
+    </article>
   )
 }

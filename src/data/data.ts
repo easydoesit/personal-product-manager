@@ -10,7 +10,7 @@ export const menuList:MenuListT = [
     anchor:'about'
   },
   {
-    title:'Projects',
+    title:'Recent Projects',
     anchor:'projects'
   },
   {
@@ -18,3 +18,9 @@ export const menuList:MenuListT = [
     anchor:'contact'
   }
 ];
+
+export const caseStudyList = [
+  {
+    url:'How-I-used-Narrative-Design-NeuroScience-an-Improv-Theatre-To-Develop-an-MVP-AI-Agent-that-stayed-Entertaining-12X-longer-than-the-competition-for-Matrix-Labs'
+  }
+]

@@ -1,7 +1,6 @@
 import { menuList } from "../data/data";
 import { MenuListI } from "../types/types";
 import { handleScrollClick } from "../utils/helpers";
-//import { sectionScrollMarginStyles } from "../data/data";
 
 export default function About({title, anchor}:MenuListI) {
   const sectionScrollMarginStyles = 'scroll-mt-20'

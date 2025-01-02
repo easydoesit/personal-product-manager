@@ -2,7 +2,7 @@ import { MenuListI } from "../types/types";
 import { Link } from "react-router";
 
 export default function Projects({title, anchor}:MenuListI) {
-  
+
   return (
     <section className="flex flex-col items-center snap-start sectionScrollMarginTop w-full my-16" id={anchor}>
       <article className=" text-darkpoop my-4 text-base w-11/12 sm:w-10/12  xl:w-1/2">
@@ -15,7 +15,7 @@ export default function Projects({title, anchor}:MenuListI) {
           </div>
         </Link>
           <div>
-            <h2 className="font-heading"><Link to="/case-studies/How-I-used-Narrative-Design-NeuroScience-an-Improv-Theatre-To-Develop-an-MVP-AI-Agent-that-stayed-Entertaining-12X-longer-than-the-competition-for-Matrix-Labs">How I Used Narrative Design, NeuroScience and Improv Theatre To Develop an MVP AI Agent that Stayed Entertaining 12X Longer than the Competition for Matrix Labs</Link></h2>
+      
           </div>
         </div>  
       </article>

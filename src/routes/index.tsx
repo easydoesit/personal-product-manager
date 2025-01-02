@@ -7,11 +7,18 @@ import Hero from '../components/hero'
 import Footer from '../components/footer';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 import '../index.css';
+import { useLocation } from "react-router";
+import CaseStudies from './caseStudies/caseStudies'
 
 export default function Index() {
+
+  const location = useLocation();
+
   return (
     <div className='snap-y'>
     <Menu />
+    {location.pathname === '/' && (
+      <>
     <Hero 
       anchor={menuList[0].anchor}
     />
@@ -26,10 +33,15 @@ export default function Index() {
         <GoogleReCaptchaProvider reCaptchaKey={import.meta.env.VITE_GOOGLE_RECAPTCHA}>
     <ContactForm title="Contact Me" anchor="contact" />
   </GoogleReCaptchaProvider>
-    {/* <ContactForm 
-       title= {menuList[3].title}
-       anchor={menuList[3].anchor}
-    /> */}
+  </>
+    )}
+
+  {location.pathname.includes('case-studies') && (
+    <>
+    <CaseStudies />
+    </>
+  )}
+
     <Footer />
     </div>
   )
